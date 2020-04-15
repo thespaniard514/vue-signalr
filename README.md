@@ -1,12 +1,6 @@
 # vue-signalr
 
-
-## Installation
-
-
-```console
-$ npm install @latelier/vue-signalr --save
-```
+Forked from https://github.com/latelierco/vue-signalr
 
 ## Get started
 
