@@ -2,6 +2,26 @@
 
 Forked from https://github.com/latelierco/vue-signalr
 
+My updates were to the listeners. You can now send as many params in the signature from the server and the package will use js spreading to pass them along to the socket listener function.
+
+```
+Example Server:
+
+public async Task SendMessage(string user, string message)
+{
+    await Clients.All.SendAsync("ReceiveMessage", user, message);
+}
+```
+```
+Example Client:
+
+sockets: {
+    ReceiveMessage(user, message) {
+      console.log(user, message);
+    },
+  },
+```
+
 ## Get started
 
 
