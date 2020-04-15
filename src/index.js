@@ -137,7 +137,7 @@ function install(Vue, connection) {
           Socket.listen(method);
 
           Socket.on(method, data =>
-            this.$options.sockets[method].call(this, data));
+            this.$options.sockets[method].call(this, ...data));
         });
       }
 
